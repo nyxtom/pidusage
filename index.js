@@ -38,6 +38,8 @@ exports.stat = function() {
 };
 
 exports.unmonitor = function(pid) {
+  if(stats.history[pid].fd)
+    require('fs').close(stats.history[pid].fd)
   delete stats.history[pid];
 };
 

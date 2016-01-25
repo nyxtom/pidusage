@@ -1,4 +1,3 @@
-
 var pidusage = require('.');
 
 setInterval(function() {
